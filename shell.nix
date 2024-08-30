@@ -1,12 +1,12 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs.buildPackages; [
-    cabal-install
+    (haskell.lib.justStaticExecutables (haskellPackages.cabal-install))
     ghc
     ghcid
     haskell-language-server
-    haskellPackages.fourmolu_0_12_0_0
-    pkgconfig
+    (haskell.lib.dontCheck (haskellPackages.callHackage "fourmolu" "0.12.0.0" {}))
+    pkg-config
     zlib.dev
   ];
 }
