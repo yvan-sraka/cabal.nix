@@ -8,5 +8,8 @@ pkgs.mkShell {
     (haskell.lib.dontCheck (haskellPackages.callHackage "fourmolu" "0.12.0.0" {}))
     pkg-config
     zlib.dev
+
+    haskellPackages.fix-whitespace
+    haskellPackages.hlint
   ];
 }
