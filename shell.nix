@@ -11,5 +11,6 @@ pkgs.mkShell {
 
     haskellPackages.fix-whitespace
     haskellPackages.hlint
+    haskellPackages.doctest
   ];
 }
