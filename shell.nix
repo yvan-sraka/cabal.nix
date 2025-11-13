@@ -11,6 +11,7 @@ pkgs.mkShell {
 
     haskellPackages.fix-whitespace
     haskellPackages.hlint
+    haskellPackages.apply-refact
     haskellPackages.doctest
   ];
 }
